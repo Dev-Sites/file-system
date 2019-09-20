@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html amp>
+<head>
+  <!-- Site made with 8b Website Builder v0.0.0.0, https://8b.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="8b v0.0.0.0, 8b.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="https://r.8b.io/37826/assets/images/favicon_16x16_16x16.png" type="image/x-icon">
+  <meta name="description" content="">
+  <title>File System</title>
+
+<link rel="canonical" href="https://bsbitu306.8b.io/file-system.html">
+ <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+ <style amp-custom>div,span,h1,h2,h3,h4,p,a{font: inherit;}*{box-sizing: border-box;outline: none;}*:focus{outline: none;}body{position: relative;font-style: normal;line-height: 1.5;color: #000000;}section{background-color: #ffffff;background-position: 50% 50%;background-repeat: no-repeat;background-size: cover;overflow: hidden;padding: 30px 0;}section,.container,.container-fluid{position: relative;word-wrap: break-word;}h1,h2,h3,h4{margin: 0;padding: 0;}p{letter-spacing: 0.5px;line-height: 1.7;}p{margin-bottom: 0;margin-top: 0;}a{cursor: pointer;}a,a:hover{text-decoration: none;}h1,h2,h3,h4,.display-2,.display-4,.display-5,.display-7{word-break: break-word;word-wrap: break-word;}strong{font-weight: bold;}body{height: auto;min-height: 100vh;}.mbr-section-title{margin: 0;padding: 0;font-style: normal;line-height: 1.2;width: 100%;}.mbr-section-subtitle{line-height: 1.3;width: 100%;}.mbr-text{font-style: normal;line-height: 1.6;width: 100%;}.btn{text-align: center;position: relative;margin: .4rem .8rem;font-weight: 700;border-width: 2px;border-style: solid;font-style: normal;white-space: normal;transition: all .2s ease-in-out,box-shadow 2s ease-in-out;display: inline-flex;align-items: center;justify-content: center;word-break: break-word;line-height: 1.5;letter-spacing: 1px;}@media (max-width: 991px){.md-pb{padding-bottom: 2rem;}}.gallery-img-wrap{position: relative;height: 100%;}.gallery-img-wrap:hover{cursor: pointer;}.gallery-img-wrap:hover:after{opacity: .5;}.gallery-img-wrap amp-img{height: 100%;}.gallery-img-wrap:after{content: "";position: absolute;top: 0;bottom: 0;left: 0;right: 0;background: #000;opacity: 0;transition: opacity .3s;pointer-events: none;}.gallery-img-wrap .img-caption{position: absolute;z-index: 3;pointer-events: none;}.gallery-img-wrap .img-caption{left: 0;right: 0;}.gallery-img-wrap .img-caption.caption-bottom{bottom: 0;}.gallery-img-wrap .img-caption:after{content: "";position: absolute;top: 0;left: 0;right: 0;height: 100%;transition: opacity .3s;z-index: -1;pointer-events: none;}@media (max-width: 767px){.gallery-img-wrap:after,.gallery-img-wrap:hover:after{display: none;}}amp-image-lightbox a.control{position: absolute;width: 32px;height: 32px;right: 48px;top: 32px;z-index: 1000;}amp-image-lightbox a.control .close{position: relative;}amp-image-lightbox a.control .close:before,amp-image-lightbox a.control .close:after{position: absolute;left: 15px;content: ' ';height: 33px;width: 2px;background-color: #fff;}amp-image-lightbox a.control .close:before{transform: rotate(45deg);}amp-image-lightbox a.control .close:after{transform: rotate(-45deg);}.iconbox.iconfont-wrapper{cursor: pointer;}.iconbox.iconfont-wrapper svg{pointer-events: none;}.lightbox{background: rgba(0,0,0,0.8);width: 100%;height: 100%;position: absolute;display: flex;flex-direction: column;-webkit-align-items: center;align-items: center;-webkit-justify-content: center;justify-content: center;}.lightbox .video-block{width: 100%;}.mbr-white{color: #ffffff;}.mbr-black{color: #000000;}.align-left{text-align: left;}.align-center{text-align: center;}@media (max-width: 767px){.align-left,.align-center{text-align: center;}}.mbr-bold{font-weight: 700;}.mbr-section-btn{margin-left: -.8rem;margin-right: -.8rem;font-size: 0;}.mbr-fullscreen .mbr-overlay{min-height: 100vh;}.mbr-fullscreen{display: flex;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;align-items: center;-webkit-align-items: center;min-height: 100vh;padding-top: 3rem;padding-bottom: 3rem;}.mbr-overlay{bottom: 0;left: 0;position: absolute;right: 0;top: 0;z-index: 0;}section.menu{min-height: 70px;}.menu-container{display: flex;justify-content: space-between;align-items: center;min-height: 70px;}@media (max-width: 991px){.menu-container{max-width: 100%;padding: 0 2rem;}}@media (max-width: 767px){.menu-container{padding: 0 1rem;}}.navbar{z-index: 100;width: 100%;}.navbar-fixed-top{position: fixed;top: 0;}@media (max-width: 767px){.navbar-logo amp-img{max-height: 55px;max-width: 55px;}}.navbar .navbar-collapse{display: flex;flex-basis: auto;align-items: center;justify-content: flex-end;}@media (max-width: 991px){.navbar .navbar-collapse{display: none;position: absolute;top: 0;right: 0;min-height: 100vh;padding: 70px 2rem 1rem;z-index: 1;}}.ampstart-btn.hamburger{position: absolute;top: 25px;right: 15px;margin-left: auto;width: 30px;height: 20px;background: none;border: none;cursor: pointer;z-index: 1000;}@media (min-width: 992px){.ampstart-btn,amp-sidebar{display: none;}}.close-sidebar{width: 30px;height: 30px;position: relative;cursor: pointer;background-color: transparent;border: none;}.close-sidebar span{position: absolute;left: 0;width: 30px;height: 2px;border-right: 5px;}.close-sidebar span:nth-child(1){transform: rotate(45deg);}.close-sidebar span:nth-child(2){transform: rotate(-45deg);}.builder-sidebar{position: relative;min-height: 100vh;z-index: 1030;padding: 1rem 2rem;max-width: 20rem;}amp-img{width: 100%;}amp-img img{max-height: 100%;max-width: 100%;}.is-builder amp-img > a + img[async],.is-builder amp-img > a + img[decoding="async"]{display: none;}html:not(.is-builder) amp-img > a{position: absolute;top: 0;bottom: 0;left: 0;right: 0;z-index: 1;}.is-builder .temp-amp-sizer{position: absolute;}.is-builder amp-youtube .temp-amp-sizer,.is-builder amp-vimeo .temp-amp-sizer{position: static;}.is-builder section.horizontal-menu .ampstart-btn{display: none;}div.placeholder{z-index: 4;background: rgba(255,255,255,0.5);}div.placeholder svg{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 20%;height: auto;}div.placeholder svg circle.big{animation: big-anim 3s linear infinite;}div.placeholder svg circle.small{animation: small-anim 1.5s linear infinite;}@keyframes big-anim{from{stroke-dashoffset: 900;}to{stroke-dashoffset: 0;}}@keyframes small-anim{from{stroke-dashoffset: 850;}to{stroke-dashoffset: 0;}}.placeholder-loader .amp-active > div{display: none;}.container{padding-right: 1rem;padding-left: 1rem;width: 100%;margin-right: auto;margin-left: auto;}@media (max-width: 767px){.container{max-width: 540px;}}@media (min-width: 768px){.container{max-width: 720px;}}@media (min-width: 992px){.container{max-width: 960px;}}@media (min-width: 1200px){.container{max-width: 1140px;}}.container-fluid{width: 100%;margin-right: auto;margin-left: auto;padding-left: 1rem;padding-right: 1rem;}.mbr-flex{display: flex;}.flex-wrap{flex-wrap: wrap;}.mbr-jc-c{justify-content: center;}.mbr-jc-e{justify-content: flex-end;}.mbr-row{display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;margin-right: -1rem;margin-left: -1rem;}@media (max-width: 767px){.mbr-col-sm-12{-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;padding-right: 1rem;padding-left: 1rem;}}@media (min-width: 768px){.mbr-col-md-8{-ms-flex: 0 0 66.666667%;flex: 0 0 66.666667%;max-width: 66.666667%;padding-left: 1rem;padding-right: 1rem;}.mbr-col-md-12{-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;padding-right: 1rem;padding-left: 1rem;}}@media (min-width: 992px){.mbr-col-lg-6{-ms-flex: 0 0 50%;flex: 0 0 50%;max-width: 50%;padding-right: 1rem;padding-left: 1rem;}.mbr-col-lg-12{-ms-flex: 0 0 100%;flex: 0 0 100%;max-width: 100%;padding-right: 1rem;padding-left: 1rem;}}.mbr-pt-2{padding-top: 1rem;}.mbr-pt-3{padding-top: 1.5rem;}.mbr-pt-4{padding-top: 2rem;}.mbr-pb-4{padding-bottom: 2rem;}.mbr-px-2{padding-left: 1rem;padding-right: 1rem;}.mbr-p-1{padding: .5rem;}.mbr-m-auto{margin: auto;}amp-img{height: 100%;width: 100%;}amp-sidebar{background: transparent;}.amp-carousel-button{outline: none;border-radius: 50%;border: 10px transparent solid;transform: scale(1.5) translateY(-50%);height: 45px;width: 45px;transition: 0.4s;cursor: pointer;}.amp-carousel-button:hover{opacity: 1;}.amp-carousel-button-next{background-position: 75% 50%;}.amp-carousel-button-prev{background-position: 25% 50%;}.iconfont-wrapper{display: inline-block;width: 1.5rem;height: 1.5rem;}.amp-iconfont{vertical-align: middle;width: 1.5rem;height: 100%;font-size: 1.5rem;}body{font-family: Didact Gothic;}.display-2{font-family: 'Roboto',sans-serif;font-size: 2.5rem;line-height: 1.2;}.display-4{font-family: 'Roboto',sans-serif;font-size: 0.75rem;line-height: 1.5;}.display-5{font-family: 'Roboto',sans-serif;font-size: 1.5rem;line-height: 1.7;}.display-7{font-family: 'Roboto',sans-serif;font-size: 1rem;line-height: 1.7;}@media (max-width: 768px){.display-2{font-size: 2rem;font-size: calc( 1.525rem + (2.5 - 1.525) * ((100vw - 20rem) / (48 - 20)));line-height: calc( 1.4 * (1.525rem + (2.5 - 1.525) * ((100vw - 20rem) / (48 - 20))));}.display-4{font-size: 0.6rem;font-size: calc( 0.9125rem + (0.75 - 0.9125) * ((100vw - 20rem) / (48 - 20)));line-height: calc( 1.4 * (0.9125rem + (0.75 - 0.9125) * ((100vw - 20rem) / (48 - 20))));}.display-5{font-size: 1.2rem;font-size: calc( 1.175rem + (1.5 - 1.175) * ((100vw - 20rem) / (48 - 20)));line-height: calc( 1.4 * (1.175rem + (1.5 - 1.175) * ((100vw - 20rem) / (48 - 20))));}.display-7{font-size: 0.8rem;font-size: calc( 1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20)));line-height: calc( 1.4 * (1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20))));}}.btn{padding: 8px 30px;border-radius: 0px;}.btn-secondary,.btn-secondary:active{background-color: #6200ee;border-color: #6200ee;color: #ffffff;}.btn-secondary:hover,.btn-secondary:focus{background-color: #380088;border-color: #380088;color: #ffffff;}.btn-secondary:disabled{color: #ffffff;background-color: #380088;border-color: #380088;}.amp-iconfont{color: #ffffff;}.btn{-webkit-border-radius: 100px;border-radius: 100px;border-width: 1px;-webkit-box-shadow: 2px 4px 7px rgba(41,44,61,0.1);box-shadow: 2px 4px 7px rgba(41,44,61,0.1);}.btn:hover,.btn:focus{-webkit-box-shadow: 2px 4px 15px rgba(41,44,61,0.3);box-shadow: 2px 4px 15px rgba(41,44,61,0.3);}.mbr-section-title,.mbr-section-subtitle{color: #292c3d;}.mbr-text{color: #4f5260;}.mbr-section-title,.mbr-section-subtitle{font-weight: 500;}.mbr-text{font-weight: 400;}.cid-rvSzsQTucl{background-color: #6200ee;}.cid-rvSzsQTucl .navbar{background: #6200ee;display: flex;}@media (max-width: 991px){.cid-rvSzsQTucl .navbar .navbar-collapse{background: #6200ee;}}.cid-rvSzsQTucl .builder-sidebar{background-color: #6200ee;}.cid-rvSzsQTucl .close-sidebar:focus{outline: 2px auto #ffffff;}.cid-rvSzsQTucl .close-sidebar span{background-color: #ffffff;}.cid-rvSzsQTucl .navbar > .container{justify-content: flex-end;}.cid-rB5rSLCLHK{padding-top: 10rem;padding-bottom: 10rem;background-image: url("https://r.8b.io/37826/images/55e4d5454850aa14ea89857dc22e3-h_k04z0c8j.jpg");align-items: center;display: flex;}.cid-rB5rSLCLHK .mbr-overlay{background: #ffffff;opacity: 0.8;}.cid-rB5rSLCLHK .mbr-section-btn{color: #000000;text-align: center;}.cid-rB5rSLCLHK .mbr-section-subtitle,.cid-rB5rSLCLHK .mbr-section-btn{color: #000000;text-align: center;}.cid-rvSIQ3K4Pd{background-image: url("https://app.8b.io/app/themes/webamp/components/_images/background6.jpg");align-items: center;display: flex;}.cid-rvSIQ3K4Pd .mbr-overlay{background: #ffffff;opacity: 0.8;}.cid-rvSIQ3K4Pd .iconfont-wrapper{width: 4.5rem;height: 4.5rem;}.cid-rvSIQ3K4Pd .amp-iconfont{font-size: 4.5rem;width: 4.5rem;color: #ca4336;}.cid-rvSIQ3K4Pd .mbr-section-btn{color: #000000;}.cid-rvSIQ3K4Pd .mbr-section-subtitle,.cid-rvSIQ3K4Pd .mbr-section-btn{color: #000000;}.cid-rvSIaTB9Se{background-image: url("https://r.8b.io/37826/images/57e6d4474850af14ea89857dc22e3-h_jxy3oheb.jpg");align-items: center;display: flex;}.cid-rvSIaTB9Se .mbr-overlay{background: #ffffff;opacity: 0.8;}.cid-rvSIaTB9Se .iconfont-wrapper{width: 4.5rem;height: 4.5rem;}.cid-rvSIaTB9Se .amp-iconfont{font-size: 4.5rem;width: 4.5rem;color: #ca4336;}.cid-rvSIaTB9Se .mbr-section-btn{color: #000000;}.cid-rvSIaTB9Se .mbr-section-title,.cid-rvSIaTB9Se .mbr-section-btn{color: #000000;}.cid-rB58nj8noZ{background-image: url("https://r.8b.io/37826/images/55e0d6404852a814ea89857dc22e3-h_k04w80j6.jpg");align-items: center;display: flex;}.cid-rB58nj8noZ .mbr-overlay{background: #ffffff;opacity: 0.8;}.cid-rB58nj8noZ .iconfont-wrapper{width: 4.5rem;height: 4.5rem;}.cid-rB58nj8noZ .amp-iconfont{font-size: 4.5rem;width: 4.5rem;color: #ca4336;}.cid-rB58nj8noZ .mbr-section-title,.cid-rB58nj8noZ .mbr-section-btn{color: #000000;}.cid-rB5pDIAkPf{background-color: #ffffff;align-items: center;display: flex;}.cid-rB5pDIAkPf .title-block{margin: auto;width: 100%;}@media (max-width: 992px){.cid-rB5pDIAkPf .title-wrap{margin-bottom: 2rem;}}.cid-rB5pDIAkPf .title-block,.cid-rB5pDIAkPf .video-block{padding-left: 0;padding-right: 0;}@media (min-width: 992px){.cid-rB5pDIAkPf .mbr-row > *{padding-left: 2rem;padding-right: 2rem;}.cid-rB5pDIAkPf .mbr-row{margin-left: -2rem;margin-right: -2rem;}}.cid-rB5pDIAkPf .mbr-section-title{color: #000;}.cid-rB5pDIAkPf .mbr-section-subtitle{color: #000;}.cid-rvSJQGCPjq{padding-top: 10rem;padding-bottom: 10rem;background-color: #b2ccd2;}.cid-rvSJQGCPjq amp-img{height: auto;width: 100%;}.cid-rvSJQGCPjq .gallery-row{padding-left: 0;padding-right: 0;}@media (max-width: 992px){.cid-rvSJQGCPjq .gallery-row{justify-content: center;}}@media (max-width: 768px){.cid-rvSJQGCPjq .gallery-row,.cid-rvSJQGCPjq .gallery-item{padding-left: 0rem;padding-right: 0rem;}}.cid-rvSJQGCPjq .gallery-item:nth-last-child(1),.cid-rvSJQGCPjq .gallery-row:nth-last-child(1){padding-bottom: 0;}.cid-rvSJQGCPjq .gallery-img-wrap:hover:after{opacity: 0.5;}@media (min-width: 768px){.cid-rvSJQGCPjq .gallery-img-wrap:hover .img-caption:after{opacity: 0;}}.cid-rvSJQGCPjq .gallery-img-wrap:after{background: #000000;}.cid-rvSJQGCPjq .gallery-img-wrap .img-caption:after{opacity: 0.5;background: #000000;}.cid-rvSJQGCPjq .mbr-section-title{color: #000000;}.cid-rvSJQGCPjq .mbr-section-subtitle{color: #000000;}.cid-rvSzt6cf77{padding-top: 3rem;padding-bottom: 0rem;background-color: #ffffff;}.cid-rvSzt6cf77 .mbr-text{color: #000000;}[class*="-iconfont"]{display: inline-flex;}</style>
+
+  <script async  src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
+
+<meta name="theme-color" content="#6200ee">
+                     <link rel="manifest" href="manifest.json">
+                     <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script></head>
+<body><amp-sidebar id="sidebar" class="cid-rvSzsQTucl" layout="nodisplay" side="right">
+		<div class="builder-sidebar" id="builder-sidebar">
+			<button on="tap:sidebar.close" class="close-sidebar">
+			<span></span>
+			<span></span>
+			</button>
+
+
+				<!-- NAVBAR ITEMS -->
+
+				<!-- NAVBAR ITEMS END -->
+				<!-- SOCIAL ICON -->
+
+				<!-- SOCIAL ICON END -->
+				<!-- SHOW BUTTON -->
+
+				<!-- SHOW BUTTON END -->
+			</div>
+	</amp-sidebar>
+  <section class="menu1 menu horizontal-menu cid-rvSzsQTucl" id="menu1-2n">
+
+	<!-- <div class="menu-wrapper"> -->
+	<nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top">
+		<div class="menu-container container mbr-jc-e">
+			<!-- SHOW LOGO -->
+
+			<!-- SHOW LOGO END -->
+			<!-- COLLAPSED MENU -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<!-- NAVBAR ITEMS -->
+
+				<!-- NAVBAR ITEMS END -->
+				<!-- SOCIAL ICON -->
+
+				<!-- SOCIAL ICON END -->
+				<!-- SHOW BUTTON -->
+
+				<!-- SHOW BUTTON END -->
+			</div>
+			<!-- COLLAPSED MENU END -->
+
+
+		</div>
+	</nav>
+	<!-- AMP plug -->
+
+	<!-- </div> -->
+</section>
+
+<section class="header1 cid-rB5rSLCLHK" id="header1-48">
+
+    <div class="mbr-overlay"></div>
+    <div class="container">
+        <div class="mbr-row align-left">
+            <div class="title-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-12">
+
+                <h2 class="mbr-section-subtitle mbr-fonts-style display-2">Create a File System for storing, searching and accessing files.</h2>
+
+                <div class="mbr-section-btn mbr-pt-4"><a class="btn btn-secondary display-7" href="#header5-3c">START</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header5 video-with-lightbox cid-rvSIQ3K4Pd mbr-fullscreen" id="header5-3c">
+
+    <div class="mbr-overlay"></div>
+    <div class="container-fluid">
+        <div class="mbr-row align-center mbr-jc-c">
+            <div class="title-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6">
+
+                <h2 class="mbr-section-subtitle mbr-fonts-style display-2"><div><strong>PART 1 - Files and File Types</strong></div></h2>
+                <amp-lightbox id="my-lightboxheader53c" layout="nodisplay">
+                  <div class="lightbox" on="tap:my-lightboxheader53c.close" role="button" tabindex="0">
+                    <div class="container">
+                        <div class="video-block"><amp-youtube width="16" height="9" layout="responsive" data-videoid="k-EID5_2D9U" autoplay="" class="mobirise-loader"></amp-youtube>
+
+                        </div>
+                    </div>
+                  </div>
+                </amp-lightbox>
+                <!-- mbr-icon -->
+                <div class="btn-wrap mbr-pt-3">
+                    <div class="iconbox iconfont-wrapper" on="tap:my-lightboxheader53c" role="button" tabindex="0">
+                        <span class="amp-iconfont fa-youtube-play fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M711 1128l484-250-484-253v503zm185-862q168 0 324.5 4.5t229.5 9.5l73 4q1 0 17 1.5t23 3 23.5 4.5 28.5 8 28 13 31 19.5 29 26.5q6 6 15.5 18.5t29 58.5 26.5 101q8 64 12.5 136.5t5.5 113.5v176q1 145-18 290-7 55-25 99.5t-32 61.5l-14 17q-14 15-29 26.5t-31 19-28 12.5-28.5 8-24 4.5-23 3-16.5 1.5q-251 19-627 19-207-2-359.5-6.5t-200.5-7.5l-49-4-36-4q-36-5-54.5-10t-51-21-56.5-41q-6-6-15.5-18.5t-29-58.5-26.5-101q-8-64-12.5-136.5t-5.5-113.5v-176q-1-145 18-290 7-55 25-99.5t32-61.5l14-17q14-15 29-26.5t31-19.5 28-13 28.5-8 23.5-4.5 23-3 17-1.5q251-18 627-18z"></path></svg></span>
+                    </div>
+                    <p class="icon-sign mbr-fonts-style mbr-pt-2 display-4">
+                        Watch Video
+                    </p>
+                </div>
+
+                <div class="mbr-section-btn mbr-pt-4"><a class="btn btn-secondary display-7" href="#header5-3b">Next</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header5 video-with-lightbox cid-rvSIaTB9Se mbr-fullscreen" id="header5-3b">
+
+    <div class="mbr-overlay"></div>
+    <div class="container">
+        <div class="mbr-row align-center mbr-jc-c">
+            <div class="title-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6">
+                <h1 class="mbr-section-title mbr-fonts-style mbr-bold display-2">PART 2 - File Management</h1>
+
+                <amp-lightbox id="my-lightboxheader53b" layout="nodisplay">
+                  <div class="lightbox" on="tap:my-lightboxheader53b.close" role="button" tabindex="0">
+                    <div class="container">
+                        <div class="video-block"><amp-youtube width="16" height="9" layout="responsive" data-videoid="DGd48PGbnBs" autoplay="" class="mobirise-loader"></amp-youtube>
+
+                        </div>
+                    </div>
+                  </div>
+                </amp-lightbox>
+                <!-- mbr-icon -->
+                <div class="btn-wrap mbr-pt-3">
+                    <div class="iconbox iconfont-wrapper" on="tap:my-lightboxheader53b" role="button" tabindex="0">
+                        <span class="amp-iconfont fa-youtube-play fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M711 1128l484-250-484-253v503zm185-862q168 0 324.5 4.5t229.5 9.5l73 4q1 0 17 1.5t23 3 23.5 4.5 28.5 8 28 13 31 19.5 29 26.5q6 6 15.5 18.5t29 58.5 26.5 101q8 64 12.5 136.5t5.5 113.5v176q1 145-18 290-7 55-25 99.5t-32 61.5l-14 17q-14 15-29 26.5t-31 19-28 12.5-28.5 8-24 4.5-23 3-16.5 1.5q-251 19-627 19-207-2-359.5-6.5t-200.5-7.5l-49-4-36-4q-36-5-54.5-10t-51-21-56.5-41q-6-6-15.5-18.5t-29-58.5-26.5-101q-8-64-12.5-136.5t-5.5-113.5v-176q-1-145 18-290 7-55 25-99.5t32-61.5l14-17q14-15 29-26.5t31-19.5 28-13 28.5-8 23.5-4.5 23-3 17-1.5q251-18 627-18z"></path></svg></span>
+                    </div>
+                    <p class="icon-sign mbr-fonts-style mbr-pt-2 display-4">
+                        Watch Video
+                    </p>
+                </div>
+
+                <div class="mbr-section-btn mbr-pt-4"><a class="btn btn-secondary display-7" href="#header5-46">Next</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header5 video-with-lightbox cid-rB58nj8noZ mbr-fullscreen" id="header5-46">
+
+    <div class="mbr-overlay"></div>
+    <div class="container-fluid">
+        <div class="mbr-row align-center mbr-jc-c">
+            <div class="title-block mbr-col-sm-12 mbr-col-md-12 mbr-col-lg-6">
+                <h1 class="mbr-section-title mbr-fonts-style mbr-bold display-2">Part 3 - Headers and Footers in Documents</h1>
+
+                <amp-lightbox id="my-lightboxheader546" layout="nodisplay">
+                  <div class="lightbox" on="tap:my-lightboxheader546.close" role="button" tabindex="0">
+                    <div class="container">
+                        <div class="video-block"><amp-youtube width="16" height="9" layout="responsive" data-videoid="V1PVHvKMXKE" autoplay="" class="mobirise-loader"></amp-youtube>
+
+                        </div>
+                    </div>
+                  </div>
+                </amp-lightbox>
+                <!-- mbr-icon -->
+                <div class="btn-wrap mbr-pt-3">
+                    <div class="iconbox iconfont-wrapper" on="tap:my-lightboxheader546" role="button" tabindex="0">
+                        <span class="amp-iconfont fa-youtube-play fa"><svg width="100%" height="100%" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M711 1128l484-250-484-253v503zm185-862q168 0 324.5 4.5t229.5 9.5l73 4q1 0 17 1.5t23 3 23.5 4.5 28.5 8 28 13 31 19.5 29 26.5q6 6 15.5 18.5t29 58.5 26.5 101q8 64 12.5 136.5t5.5 113.5v176q1 145-18 290-7 55-25 99.5t-32 61.5l-14 17q-14 15-29 26.5t-31 19-28 12.5-28.5 8-24 4.5-23 3-16.5 1.5q-251 19-627 19-207-2-359.5-6.5t-200.5-7.5l-49-4-36-4q-36-5-54.5-10t-51-21-56.5-41q-6-6-15.5-18.5t-29-58.5-26.5-101q-8-64-12.5-136.5t-5.5-113.5v-176q-1-145 18-290 7-55 25-99.5t32-61.5l14-17q14-15 29-26.5t31-19.5 28-13 28.5-8 23.5-4.5 23-3 17-1.5q251-18 627-18z"></path></svg></span>
+                    </div>
+                    <p class="icon-sign mbr-fonts-style mbr-pt-2 display-4">
+                        Watch Video
+                    </p>
+                </div>
+
+                <div class="mbr-section-btn mbr-pt-4"><a class="btn btn-secondary display-7" href="#header3-47">NEXT</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header3 cid-rB5pDIAkPf mbr-fullscreen" id="header3-47">
+
+
+    <div class="container">
+        <div class="mbr-row mbr-black">
+            <div class="title-wrap mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-6 align-center mbr-flex">
+                <div class="title-block mbr-col-sm-12 mbr-col-md-12">
+                    <h1 class="mbr-section-title mbr-fonts-style mbr-bold display-2">PART 4 - Use Tracking &amp; Comments for Version Control.</h1>
+                    <h2 class="mbr-section-subtitle mbr-fonts-style mbr-pt-3 display-5">Understand the use of document history in cloud word processing software to track changes and version history.</h2>
+
+                    <div class="mbr-section-btn mbr-pt-4"><a class="btn btn-secondary display-7" href="#gallery1-3d">NEXT</a></div>
+                </div>
+            </div>
+            <div class="video-wrap mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-6 mbr-flex">
+                <div class="video-block mbr-col-md-12 mbr-col-sm-12 mbr-m-auto"><amp-youtube width="16" height="9" layout="responsive" data-videoid="m7tmsWN6uH0" class="placeholder-loader"></amp-youtube>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery gallery1 cid-rvSJQGCPjq" id="gallery1-3d">
+
+
+    <div class="container-fluid">
+        <div class="title mbr-pb-4 align-center">
+            <h3 class="mbr-section-title mbr-bold mbr-fonts-style display-2"><strong><u>Your activity</u></strong> is to create a file system for your business.</h3>
+            <h4 class="mbr-section-subtitle mbr-fonts-style mbr-pt-2 display-5">In the section below, upload a screenshot of your filing system that you create.<br>Below is an example of a file management system.</h4>
+        </div>
+        <div class="mbr-row mbr-px-2 gallery-wrap mbr-jc-c">
+            <div class="mbr-col-md-12 mbr-col-sm-12 gallery-row row-first flex-wrap mbr-col-lg-12 mbr-pb-4 mbr-flex">
+
+            <div class="gallery-item mbr-col-sm-12 mbr-col-lg-6 mbr-col-md-8 md-pb mbr-px-2">
+                    <div class="gallery-img-wrap">
+                        <amp-img class="placeholder-loader" src="https://r.8b.io/37826/images/Screen32Shot322019-07-1132at3-h_jxy3z8ku-885x502.png" layout="responsive" height="336" width="592.3505976095618" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                        <div class="img-caption caption-bottom">
+                            <p class="caption-text mbr-fonts-style mbr-p-1 mbr-white display-7">Top Level Files</p>
+                        </div>
+                    </div>
+                </div><div class="gallery-item mbr-col-sm-12 mbr-col-lg-6 mbr-col-md-8 md-pb mbr-px-2">
+                    <div class="gallery-img-wrap">
+                        <amp-img class="placeholder-loader" src="https://r.8b.io/37826/images/Screen32Shot322019-07-1132at3-h_jxy403th-885x514.png" layout="responsive" height="344" width="592.295719844358" alt="">
+                            <div placeholder="" class="placeholder">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                                    <circle class="big" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="230" stroke-dashoffset="230" cx="150" cy="150" r="145"></circle>
+                                    <circle class="small" fill="none" stroke="#c2e0e0" stroke-width="3" stroke-dasharray="212" cx="150" cy="150" r="135"></circle>
+                                </svg></div>
+
+                        </amp-img>
+                        <div class="img-caption caption-bottom">
+                            <p class="caption-text mbr-fonts-style mbr-p-1 mbr-white display-7">Second Level Files (A-E)</p>
+                        </div>
+                    </div>
+                </div></div>
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="title1 cid-rvSzt6cf77" id="title1-2y">
+
+    <!--Block parameters controls (Blue "Gear" panel) -->
+
+    <div class="container">
+        <div class="title align-center">
+
+            <h4 class="mbr-text mbr-fonts-style mbr-pt-2 display-5"><strong>ACTIVITY</strong><br>Login to your chosen filing system e.g. Google Drive / Microsoft Office or your computer filing system e.g. C drive (C:).</h4><br><p>1. <u>Create</u> your filing system;<br>2. <u>Take a screenshot</u>; and<br>3. <u>Upload the image</u>&nbsp;below.<br><em>*Use the example above as a guide.</em></p><br><br>
+        </div>
+    </div>
+</section>
+
+
+
+
+<amp-install-serviceworker src="sw.js" layout="nodisplay"></amp-install-serviceworker><amp-analytics type="googleanalytics">
+                                    <script type="application/json">
+                                    {
+                                        "vars": {
+                                          "account": "UA-143256973-3"
+                                        },
+                                        "triggers": {
+                                          "default pageview": {
+                                            "on": "visible",
+                                            "request": "pageview",
+                                            "vars": {
+                                              "title": "BSBITU306"
+                                            }
+                                          }
+                                        }
+                                    }
+                                    </script>
+                                </amp-analytics>
+                            </body>
+</html>
